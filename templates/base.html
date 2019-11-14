@@ -1,7 +1,19 @@
+<html>
+
+<head>
+    <title>Postagens</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>
+
 <header>
-    <a href="{% url 'home' %}">Página Inicial</a>
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'listagem' %}">Postagens</a> |
+    <a href="{% url 'post_new' %}">Novo post</a> |
     <a href="{% url 'sobre' %}">Sobre</a>
 </header>
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
 
-{% block content %}
-{% endblock content %}
+</html>
